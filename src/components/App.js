@@ -50,13 +50,13 @@ class App extends Component {
 
   render() {
     return (
-      <div id="main">
+     
        <ol>
          {this.valid()}
        </ol>
         {/* Do not remove the main div */}
-      </div>
-    )
+      
+    );
   }
 }
 
