@@ -35,11 +35,25 @@ class App extends Component {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+    this.valid = this.valid.bind(this)
   }
+  valid(){
+   let a = [];
+   let j = 1;
+   for(let i=0; i<this.cityList.length;i++){
+       if(this.cityList[i].country === 'India'){
+       a.push(<li key={'location' + j++} >{this.cityList[i].name}</li>)
+       }
+   }
+   return a;
+ }
 
   render() {
     return (
       <div id="main">
+       <ol>
+         {this.valid()}
+       </ol>
         {/* Do not remove the main div */}
       </div>
     )
